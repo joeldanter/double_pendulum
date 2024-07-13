@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 import pygame
-import threading
 
 
 class DoublePendulum:
@@ -37,13 +36,11 @@ class DoublePendulum:
         self.angular_velocities+=(l1+2*l2+2*l3+l4)/6
 
         self.refresh()
-        Ek=self.get_kinetic_energy()
-        if self.get_kinetic_energy()<0.01:
-            print(Ek)
+
         #is_on_right=self.angles.x%(np.pi*2)<np.pi
         #was_on_right=prev_angles.x%(np.pi*2)<np.pi
         #if (is_on_right and not was_on_right and self.angular_velocities.x>0) or (not is_on_right and was_on_right and self.angular_velocities.x<0):
-        self.subspace_crossed_callback(self) # TODO pontos szogekkel es szogsebessegekkel
+        self.subspace_crossed_callback(self)
 
     # paraméterben megadott szögeknél és szögsebességeknel számítja ki a szöggyorsulásokat
     # runge kutta 4-hez kell
@@ -172,16 +169,10 @@ class World:
             self.screen.blit(label, (5, 5+i*20))
 
 
-lastdeg=0
 def cross(pendulum):
     global lastdeg
-    angs=pygame.math.Vector2(pendulum.angles.x,pendulum.angles.y)
-    #if angs.x>np.pi:
-    #    angs.x-=2*np.pi
-    #if angs.y>np.pi:
-    #    angs.y-=2*np.pi
-    xpoints.append(angs.x)
-    ypoints.append(angs.y)
+    xpoints.append(pendulum.angles.x)
+    ypoints.append(pendulum.angles.y)
     degree=np.arctan(-pendulum.angular_velocities.y/pendulum.angular_velocities.x)+np.pi/2
     if pendulum.angular_velocities.x<0:
         degree+=np.pi
@@ -208,8 +199,9 @@ world = World(pendulums, (800,600), pygame.math.Vector2(400,300), 150, 0.01, 1)
 world.start()
 '''
 
+lastdeg=0
 xpoints, ypoints, zpoints=[],[],[]
-angles=pygame.math.Vector2(np.pi*2/6, np.pi*-2/6)
+angles=pygame.math.Vector2(np.pi*2/6, np.pi*5/6)
 angular_velocities=pygame.math.Vector2(0,0)
 color=(255, 0, 0)
 pendulum=DoublePendulum(1,1,1,1,angles, angular_velocities, color, 9.81, cross)
@@ -222,6 +214,6 @@ ax.scatter(xpoints[0], ypoints[0], zpoints[0], color='red')
 ax.scatter(xpoints[-1], ypoints[-1], zpoints[-1], color='green')
 ax.set_xlabel('angle1')
 ax.set_ylabel('angle2')
-ax.set_zlabel('degree')
+ax.set_zlabel('υ')
 ax.view_init(elev=90, azim=-90, roll=0)
-target=plt.show()
+plt.show()
