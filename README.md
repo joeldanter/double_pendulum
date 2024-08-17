@@ -3,33 +3,38 @@ Osztályok és függvények gyűjteménye a dupla inga szimulációjához, anim�
 
 ## Installation
 1. Clone the repository
-```bash
+```shell
 git clone https://github.com/joeldanter/double_pendulum.git
 ```
 2. Enter the directory
-```bash
+```shell
 cd double_pendulum
 ```
 3. Create virtual environment
-```bash
+```shell
 python -m venv .venv
 ```
 4. Install dependencies
-```bash
+```shell
 pip install -r requirements.txt
 ```
 
 ## Használat
-Fő program futtatásához:
-```bash
+1. Virtuális környezetet aktiválása
+```shell
+"./.venv/Scripts/activate"
+```
+2. Futtatás
+Fő program
+```shell
 python main.py
 ```
-Vektormező kirajzolásához:
-```bash
+Vektormező kirajzolása
+```shell
 python vector_field.py
 ```
-Érdekesség:
-```bash
+Érdekesség
+```shell
 python eigenvalues.py
 ```
 
