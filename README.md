@@ -18,10 +18,9 @@ pip install -r requirements.txt
 ```
 
 ## Files
-- `double_pendulum.py`: Osztály ami egy dupla inga értékeit és fizikáját kezeli.
-- `world.py`: Osztlály, ami egyszerre több dupla ingának a kirajzolását, animálását és időkezelését végzi.
+- `double_pendulum.py`: Osztályokat tartalmaz ami egy dupla inga értékeit és fizikáját kezeli.
+- `world.py`: Osztályt tartalmaz, ami egyszerre több dupla ingának a kirajzolását, animálását és időkezelését végzi.
 - `plotting.py`: Függvényeket tartalmaz, amik fázisterek kirajzolásához szükségesek.
-- `eigenvalues.py`: Csak érdekesség
 - `README.md`: Ez a fájl
 - `requirements.txt`: Szükséges modulok a projekthez
 
@@ -33,3 +32,4 @@ pip install -r requirements.txt
 - `multiple_set_e.py`: `multiple.py`, csak beállítja az ingák energiáit egy adott értékre, fázisterüket kirajzoltatja.
 - `scatter_set_e.py`: `scatter.py`, csak beállítja az ingák energiáit egy adott értékre, fázisterüket kirajzoltatja.
 - `vector_field.py`: Vektor mezőt rajzol ki.
+- `eigenvalues.py`: Csak érdekesség
