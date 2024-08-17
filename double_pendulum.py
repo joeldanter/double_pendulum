@@ -115,8 +115,8 @@ class DoublePendulum:
                 dEpdt1=self.g*(self.m1+self.m2)*self.l1*np.sin(self.angle1)
                 dEpdt2=self.g*self.m2*self.l2*np.sin(self.angle2)
                 
-                self.angle1-=np.min((np.abs(dEp/dEpdt1),np.pi/8))*np.sign(dEpdt1)/2
-                self.angle2-=np.min((np.abs(dEp/dEpdt2),np.pi/8))*np.sign(dEpdt2)/2                    
+                self.angle1-=np.min((np.abs((dEp+(1e-8))/dEpdt1),np.pi/8))*np.sign(dEpdt1)/2
+                self.angle2-=np.min((np.abs((dEp+(1e-8))/dEpdt2),np.pi/8))*np.sign(dEpdt2)/2
                 
                 if iter==max_iter:
                     raise Exception('panik, newton raphson nem konvergalt')
