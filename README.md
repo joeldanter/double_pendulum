@@ -17,6 +17,13 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+## Használat
+Indítsa el a "futtatható" fájlok egyikét
+Például:
+```bash
+python multiple_set_e.py
+```
+
 ## Files
 - `double_pendulum.py`: Osztályokat tartalmaz ami egy dupla inga értékeit és fizikáját kezeli.
 - `world.py`: Osztályt tartalmaz, ami egyszerre több dupla ingának a kirajzolását, animálását és időkezelését végzi.
