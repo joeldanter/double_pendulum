@@ -1,5 +1,4 @@
-from DoublePendulum import *
-from World import World
+from double_pendulum import *
 from plotting import *
 import numpy as np
 

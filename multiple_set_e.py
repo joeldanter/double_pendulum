@@ -1,5 +1,5 @@
-from DoublePendulum import *
-from World import *
+from double_pendulum import *
+from world import *
 from plotting import *
 import numpy as np
 from matplotlib import colors, colormaps

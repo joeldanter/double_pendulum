@@ -1,7 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from DoublePendulum import DoublePendulum
+from double_pendulum import *
 
+
+'''
+Ez a dupla inga jacobi-mátrixának eigenértékeinek valós részeinek
+maximális értékeit rajzolja ki a szögek függvényében, ha a
+szögsebességek értékei 0>
+'''
 
 def value(pendulum, angle1, angle2, ang_vel1, ang_vel2):
     pendulum.angle1=angle1

@@ -1,5 +1,5 @@
 import pygame
-from DoublePendulum import *
+from double_pendulum import *
 
 
 class World:
