@@ -14,7 +14,7 @@ cd double_pendulum
 ```shell
 python -m venv .venv
 ```
-3. Virtuális környezetet aktiválása
+3. Activate virtual environment
 ```shell
 "./.venv/Scripts/activate"
 ```
