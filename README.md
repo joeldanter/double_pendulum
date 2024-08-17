@@ -25,15 +25,15 @@ pip install -r requirements.txt
 "./.venv/Scripts/activate"
 ```
 2. Futtatás
-Fő program
+- Fő program
 ```shell
 python main.py
 ```
-Vektormező kirajzolása
+- Vektormező kirajzolása
 ```shell
 python vector_field.py
 ```
-Érdekesség
+- Érdekesség
 ```shell
 python eigenvalues.py
 ```
