@@ -3,16 +3,19 @@ Osztályok és függvények gyűjteménye a dupla inga szimulációjához, anim�
 Emellett tartalmaz fájlokat amik ezeket használják, esetleg különböző érdekességeket demonstrálnak.
 
 ## Installation
-1. Clone the repository, and enter it
+1. Clone the repository
 ```bash
 git clone https://github.com/joeldanter/double_pendulum.git
+```
+2. Enter the directory
+```bash
 cd double_pendulum
 ```
-2. Create virtual environment
+4. Create virtual environment
 ```bash
 python -m venv .venv
 ```
-3. Install dependencies
+5. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
