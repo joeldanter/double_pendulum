@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ```
 
 ## Használat
-1. Virtuális környezetet aktiválása, ha azóta deaktiválva lett
+1. Virtuális környezetet aktiválása, ha azóta deaktiválva lett, különben nem találja a modulokat
 ```shell
 "./.venv/Scripts/activate"
 ```
