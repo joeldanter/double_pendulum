@@ -1,6 +1,7 @@
 import numpy as np
 from pygame.math import Vector2
 
+
 class DoublePendulum:
     def __init__(self, m1, m2, l1, l2, angle1, angle2, ang_vel1, ang_vel2, trace_color, g):
         self.m1=m1 # első súly tömege

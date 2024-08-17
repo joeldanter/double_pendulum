@@ -1,8 +1,10 @@
-from double_pendulum import *
-from world import *
-from plotting import *
+from double_pendulum import TrackedDoublePendulum
+from world import World
+from plotting import plot_phase_space
 from matplotlib import colors, colormaps
 import random
+from pygame.math import Vector2
+import numpy as np
 
 
 m1, m2, l1, l2 = 1, 1, 1, 1
@@ -19,7 +21,7 @@ for i in range(n):
     pendulum=TrackedDoublePendulum(m1, m2, l1, l2, angle1, angle2, ang_vel1, ang_vel2, color, g)
     pendulum.set_ups_e(random.random()*2*np.pi, E, adjust_Ep=True, Eptol=1)
     pendulums.append(pendulum)
-world = World(pendulums, (800,600), pygame.math.Vector2(400,300), 140, 0.002, 100)
+world = World(pendulums, (800,600), Vector2(400,300), 140, 0.002, 100)
 world.start()
 
 plot_phase_space(pendulums, False)

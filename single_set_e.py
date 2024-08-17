@@ -1,6 +1,8 @@
-from double_pendulum import *
-from world import *
-from plotting import *
+from double_pendulum import TrackedDoublePendulum
+from world import World
+from plotting import plot_phase_space
+from pygame.math import Vector2
+import numpy as np
 
 
 m1, m2, l1, l2 = 1, 1, 1, 1
@@ -11,7 +13,7 @@ ang_vel1, ang_vel2=0, 0
 color= 'blue'
 pendulum=TrackedDoublePendulum(m1, m2, l1, l2, angle1, angle2, ang_vel1, ang_vel2, color, g)
 pendulum.set_ups_e(3/8*np.pi, E, adjust_Ep=True, Eptol=1)
-world = World([pendulum], (800,600), pygame.math.Vector2(400,300), 140, 0.002, 100)
+world = World([pendulum], (800,600), Vector2(400,300), 140, 0.002, 100)
 world.start()
 
 plot_phase_space([pendulum])

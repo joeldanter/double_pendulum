@@ -1,7 +1,9 @@
-from double_pendulum import *
-from world import *
+from double_pendulum import DoublePendulum
+from world import World
 from matplotlib import colors, colormaps
 import random
+import numpy as np
+from pygame.math import Vector2
 
 
 m1, m2, l1, l2 = 1, 1, 1, 1
@@ -16,5 +18,5 @@ for i in range(n):
     color= colors.to_hex(rgb)
     pendulum=DoublePendulum(m1, m2, l1, l2, angle1, angle2, ang_vel1, ang_vel2, color, g)
     pendulums.append(pendulum)
-world = World(pendulums, (800,600), pygame.math.Vector2(400,300), 140, 0.002, 1)
+world = World(pendulums, (800,600), Vector2(400,300), 140, 0.002, 1)
 world.start()

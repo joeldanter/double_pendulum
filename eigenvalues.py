@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from double_pendulum import *
+from double_pendulum import DoublePendulum
 
 
 '''

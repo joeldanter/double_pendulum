@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
-from double_pendulum import *
+from double_pendulum import DoublePendulum
+import numpy as np
+
 
 def plot_phase_space(pendulums, transverses=True):
     # Ellenőrzés hogy az ingák energiái megegyeznek-e

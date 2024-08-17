@@ -1,5 +1,5 @@
-from double_pendulum import *
-from plotting import *
+from double_pendulum import DoublePendulum
+from plotting import vector_field
 import numpy as np
 
 
