@@ -10,11 +10,11 @@ git clone https://github.com/joeldanter/double_pendulum.git
 ```bash
 cd double_pendulum
 ```
-4. Create virtual environment
+3. Create virtual environment
 ```bash
 python -m venv .venv
 ```
-5. Install dependencies
+4. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
